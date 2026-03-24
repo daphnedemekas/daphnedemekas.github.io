@@ -24,12 +24,6 @@ For navigation, we tackled this by algorithmically generating various map layout
 
 A crucial component in our success was building an approach to order our environments during training based on how well the agents were learning, so that the policy would train on environments in increasing order of learning potential (often easier environments first, i.e. smaller maps with fewer obstacles, and more complicated terrain later in training).
 
-[video:navigation-training.mov]
-*Example of a navigation training environment.*
-
-[video:navigation-eval.mov]
-*Example of a navigation eval environment.*
-
 ## Object Use
 
 Once we had agents that were good at navigating terrain, we extended this to training agents in worlds with different kinds of objects, and evaluating their ability to learn how to use them (for example using converters to exchange resources, or moving blocks around).
@@ -51,11 +45,8 @@ The policy's memory state would persist within an episode (while learning the gi
 
 This approach worked. The policy was able to in-context learn how to complete an arbitrary 5-step sequence with two distractor sinks at near optimal performance. The behavior suggests a learned form of elimination reasoning and progress tracking: the agent avoids reusing sinks, delays converter use until appropriate (waiting for the converter to refresh), and navigates directly to the final converter. Once it has identified the correct resource chain, it continuously performs the cycle until the end of the episode, and then restarts in the new world.
 
-[video:in-context-learning.mov]
-*An agent in-context learning a five step resource chain with two distractor sinks. The resource chain is altar —>lab —>red mine —>blue generator —> green generator, and the red generator and the green mine are sinks (they take any resource and return nothing). The agent discovers the chain via trial and error and then succeeds to reproduce it once learned.*
+## What came next 
 
-## What's Next
-
-In context learning means the strategy of seeking out the rules of the game in-context, and then playing it, is encoded in the weights of the policy. The next phase was extending the space of kinds of tasks the agents can learn, to longer chains, more sophisticated sign-goal pairs, difficult-to-navigate terrain, and ultimately using other agents as signals to condition particular game rules or strategies. In addition, bridging together the generalized navigation curriculum with the in-context curriculum, to empower agents to explore the space to seek out information for task discovery.
+In-context learning means the strategy of seeking out the rules of the game, and then playing it, is encoded in the weights of the policy. The next phase was extending the space of kinds of tasks the agents can learn, to longer chains, more sophisticated sign-goal pairs, difficult-to-navigate terrain, and ultimately using other agents as signals to condition particular game rules or strategies. In addition, bridging together the generalized navigation curriculum with the in-context curriculum, to empower agents to explore the space to seek out information for task discovery.
 
 Once the agents are skilled at actively exploring to seek out information, they can use that information to learn the rules of the game, and then play the game, in-context every episode, and then ultimately take off into the space of cooperative and cumulative strategies.

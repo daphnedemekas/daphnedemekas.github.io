@@ -328,6 +328,24 @@ a:hover {
   color: var(--text);
 }
 
+.cv-entry-header h4 a,
+.cv-list a,
+.pub-list a,
+.cv-institution a {
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 2px;
+  transition: text-decoration-color var(--transition), color var(--transition);
+}
+
+.cv-entry-header h4 a:hover,
+.cv-list a:hover,
+.pub-list a:hover,
+.cv-institution a:hover {
+  text-decoration-color: var(--text-light);
+  opacity: 1;
+}
+
 .cv-date {
   font-size: 0.8rem;
   color: var(--text-faint);
