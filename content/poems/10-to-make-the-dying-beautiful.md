@@ -40,12 +40,6 @@ and all that came before,
 the rotten and the beautiful.
 
 In the warmth of my hand I sense
-that we have all been here already,
+that we have been here
 countless times before, 
 and so we know what to do with this. 
-
-The opportunity for drama in every moment 
-lends itself carefully, creating explanations 
-for dust particles, the emergence of order, 
-slowly, over epochs,
-an elegant context for our predicament.
