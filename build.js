@@ -280,8 +280,8 @@ const html = `<!DOCTYPE html>
       <a href="#about" class="nav-link">About</a>
       <a href="#research" class="nav-link">Research</a>
       <a href="#photos" class="nav-link">Photos</a>
-      <a href="#poetry" class="nav-link">Poetry</a>
       <a href="#thoughts" class="nav-link">Thoughts</a>
+      <a href="#poetry" class="nav-link">Poetry</a>
     </div>
   </nav>
 
@@ -300,11 +300,11 @@ const html = `<!DOCTYPE html>
         <a href="#photos" class="home-card">
           <span class="home-card-label">Photos</span>
         </a>
-        <a href="#poetry" class="home-card">
-          <span class="home-card-label">Poetry</span>
-        </a>
         <a href="#thoughts" class="home-card">
           <span class="home-card-label">Thoughts</span>
+        </a>
+        <a href="#poetry" class="home-card">
+          <span class="home-card-label">Poetry</span>
         </a>
       </div>
       <div class="home-contact">
@@ -481,18 +481,6 @@ ${renderPhotos(photos)}
     </div>
   </section>
 
-  <!-- Poetry -->
-  <section id="poetry" class="section section-poetry">
-    <div class="container">
-      <header class="section-header">
-        <h2 class="section-title">Poetry</h2>
-      </header>
-      <div class="poems-grid">
-${renderPoems(poems)}
-      </div>
-    </div>
-  </section>
-
   <!-- Thoughts -->
   <section id="thoughts" class="section section-thoughts">
     <div class="container">
@@ -505,6 +493,18 @@ ${renderThoughts(thoughts)}
     </div>
   </section>
 
+  <!-- Poetry -->
+  <section id="poetry" class="section section-poetry">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-title">Poetry</h2>
+      </header>
+      <div class="poems-grid">
+${renderPoems(poems)}
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-inner">
@@ -513,8 +513,8 @@ ${renderThoughts(thoughts)}
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#photos">Photos</a>
-        <a href="#poetry">Poetry</a>
         <a href="#thoughts">Thoughts</a>
+        <a href="#poetry">Poetry</a>
       </div>
       <div class="footer-contact">
         <a href="mailto:daphnedemekas@gmail.com">daphnedemekas@gmail.com</a>

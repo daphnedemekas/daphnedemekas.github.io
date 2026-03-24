@@ -450,7 +450,7 @@ a:hover {
 
 /* --- Poetry --- */
 .section-poetry {
-  background: var(--bg-alt);
+  background: var(--bg);
 }
 
 .poems-grid {
@@ -745,7 +745,7 @@ a:hover {
 }
 
 .section-thoughts {
-  background: var(--bg);
+  background: var(--bg-alt);
 }
 
 .thoughts-list {

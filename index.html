@@ -24,8 +24,8 @@
       <a href="#about" class="nav-link">About</a>
       <a href="#research" class="nav-link">Research</a>
       <a href="#photos" class="nav-link">Photos</a>
-      <a href="#poetry" class="nav-link">Poetry</a>
       <a href="#thoughts" class="nav-link">Thoughts</a>
+      <a href="#poetry" class="nav-link">Poetry</a>
     </div>
   </nav>
 
@@ -44,11 +44,11 @@
         <a href="#photos" class="home-card">
           <span class="home-card-label">Photos</span>
         </a>
-        <a href="#poetry" class="home-card">
-          <span class="home-card-label">Poetry</span>
-        </a>
         <a href="#thoughts" class="home-card">
           <span class="home-card-label">Thoughts</span>
+        </a>
+        <a href="#poetry" class="home-card">
+          <span class="home-card-label">Poetry</span>
         </a>
       </div>
       <div class="home-contact">
@@ -481,6 +481,74 @@
     </div>
   </section>
 
+  <!-- Thoughts -->
+  <section id="thoughts" class="section section-thoughts">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-title">Thoughts</h2>
+      </header>
+      <div class="thoughts-list">
+
+        <article class="thought" id="identity-geometry">
+          <div class="thought-header">
+            <h3 class="thought-title">Identity Geometry</h3>
+            <time class="thought-date">March 2026</time>
+          </div>
+          <p class="thought-preview">At the intersection of human and artificial minds there is an open question about what it means to have an identity at all - why it arises, what it does, and whether it is helpful or harmful for a&hellip;</p>
+          <div class="thought-body">
+            <p>At the intersection of human and artificial minds there is an open question about what it means to have an identity at all - why it arises, what it does, and whether it is helpful or harmful for a learning system.</p>
+            <h4>A symphony of selves</h4>
+            <p>When I try to formulate a concrete concept of who I am and what I am like, each of the various forms dissolves under examination. They attach themselves to hooks about my motivations, my relationships, the way I want to be seen, and they justify themselves. They begin to feel real enough that I can put them on, and then they slip away.</p>
+            <p>I can feel the collection of my narrative selves arguing with one another, each one tugging at a different possibility: who to be, how to be her, what would make sense. I'm drawn to the belief that there is a higher self, or a truer self, which is the amalgamation of all of them &mdash; the thing from which they arise and to which they return. But the construction of my reality, my interactions, my decisions, day to day, is constantly in exchange with this orchestra of stories.</p>
+            <p>Take mathematics. I was drawn to it at a time when developing and growing and being in the world felt deeply confusing, in all the ways it does when you are still assembling yourself. When I sat and thought about the abstract world of math, it made sense and I had a sure way of being right about something.</p>
+            <p>Over time it became something more layered - both a thing in itself and a story about who I was. It paved the way for a lot of what unraveled for me: the research, the people I met through it; it was a toolkit I used to formulate abstractions about the way things change and form relations with each other, the way spaces deform and objects move within them, a particular lens I could peer at life through.</p>
+            <p>And now my relationship to math is both beautiful and heavy. The pure appreciation and awe is ever present, but there is also frustration: as my identity evolves around it and my attention lands on other things in other ways, I settle into the magnitude of what I will never fully understand. The depth of the thing exceeds what I can hold.</p>
+            <p>All of that to say: if you were to probe the representation of mathematics in my mind, you wouldn't find a clean, context-free concept. You would find something entangled with emotion, with self-construction, with the particular moment in life when I first reached for it. And I wonder, why is that? Why do we wrap our representations so deeply in the history of how we formed and what we needed? What is it about minds that makes things matter, and binds concepts to the self?</p>
+            <h4>Interpreting the model</h4>
+            <p>This is what makes the question so interesting when you turn it toward large language models. With these systems, you actually can do these probes. Representation engineering and linear probing methods - techniques for reading information encoded in a model's internal activations - make it possible to locate where and how a concept lives in the model's geometry, and to ask questions about the relationship between different versions of the same idea.</p>
+            <p>Recent work extracting persona vectors from model activations has shown that personality-relevant information is genuinely structured in that space &mdash; not just a surface behavior but something with geometric shape (Chen et al., 2025). The question is how deep that structure goes, and what it's connected to.</p>
+            <p>I'm interested in whether the way a model represents a concept in relation to itself is geometrically equivalent to how it represents that concept in theory, or in relation to others. Are there clean transformations between a model's concept of itself being honest, and you telling the truth, and a politician making a promise, and a character in a novel confessing something? How does any of that translate into the model actually being honest?</p>
+            <p>This last question is the personality illusion. Han et al. (2025) showed that RLHF-trained models produce stable, internally consistent self-reported personality profiles, and that those profiles are surprisingly weak predictors of how the model actually behaves on tasks designed to measure the same traits. The self-concept and the behavioral disposition are already coming apart at the text level, and I want to know where they come apart in the geometry.</p>
+            <p>I see the gap between a model's self-concept, its behavioral disposition, and its self-report as a hook to legibility: being able to actually understand the model, and eventually, the models&rsquo;s ability to understand us.</p>
+            <p>We can probe current models with classifiers trained on activations and contrastive steering experiments, methods developed in representation engineering (Zou et al., 2023). There is even evidence of what Binder et al. (2024) call privileged self-prediction &mdash; models predict their own future behavior better than other models can, which suggests some form of internal self-access exists, though its mechanism remains unidentified.</p>
+            <p>The question is what we find when we look more carefully: whether the model's identity, such as it is, is coherent across these different modes of representation, or whether it is, like mine sometimes feels, a collection of narratives that are at times in conflict, that rise and rest from the deeper mystery of the self.</p>
+
+          </div>
+          <div class="thought-collapse"><button>Close</button></div>
+        </article>
+
+        <article class="thought" id="pondering-the-mind-manifold">
+          <div class="thought-header">
+            <h3 class="thought-title">Pondering the Mind Manifold</h3>
+            <time class="thought-date">December 2025</time>
+          </div>
+          <p class="thought-preview">Lately I’ve been enjoying imagining the space of my mind as a latent space of a neural network - a high-dimensional manifold, folded in such a way that every concept I hold can be unfurled to reveal&hellip;</p>
+          <div class="thought-body">
+            <h4>Latent Space of Mind</h4>
+            <p>Lately I&rsquo;ve been enjoying imagining the space of my mind as a latent space of a neural network - a high-dimensional manifold, folded in such a way that every concept I hold can be unfurled to reveal further hidden associations, such that two ideas might appear close along some axes but distant along others. Thinking this way helps conceptualize experience not as a flat sequence of thoughts and feelings, but as trajectories through a richly structured geometry.</p>
+            <p>What intrigues me is that this mind-manifold isn&rsquo;t just filled with concepts. In its rich and convoluted landscape, it also contains my ways of forming concepts: my habits, intuitions, tendencies, and methods of meaning-making. Every moment of my experience is invoking a hierarchical, complex traversal of this space, through the representation of what I&rsquo;m seeing, how I&rsquo;m seeing it, what it means to me, and how I&rsquo;m holding myself throughout that moment, in my body, and in the seat of my mind. My sensation, thoughts, and actions are a continuous, interconnected choreography: activating one region inevitably excites a constellation of others in a never-ending, cosmic brain-dance.</p>
+            <p>Given the mind as a manifold, one might naturally start wondering: How is this space structured? How does it change as I gain new experiences? What makes one explanation feel coherent, useful, and satisfying, while another falls flat?</p>
+            <h4>Latent Space of AI</h4>
+            <p>The idea of the structure of the manifold of mind is a perfect analogy for the modern neural network. There&rsquo;s this paper, Questioning Representational Optimism in Deep Learning: The Fractured Entangled Representation Hypothesis , which contrasts two possibilities for learned representations in AI systems: firstly the Unified Factored Representation (UFR): where the internal geometry of a model is clean, compositional, and coherent, such that related things cluster together; knowledge generalizes smoothly, and secondly the Fractured Entangled Representation (FER): where representations are messy, fragmented, and inconsistent. Related concepts are scattered across the space, far apart when they should be near, degrading the system&rsquo;s capacity to generalize, learn continually, or be creative.</p>
+            <p>This also relates to the interpretability work being done at GoodFire, Understanding Memory in Loss Curvature, where they are trying to understand how to identify whether a network is storing concepts in a way that are &ldquo;general&rdquo; - which means if I perturbed the activation vector representing one concept, that would result in a large shift in the representations of other concepts, or not. They call the former &ldquo;reasoning&rdquo; and the latter &ldquo;memory&rdquo;, and go on to show that the results of their experiments suggest that these LLMs are memorizing concepts like math, but reasoning through concepts like boolean logic (If I perturb the representation of &ldquo;if&rdquo; in my LLM, everything else that it represents reacts to that perturbation).</p>
+            <h4>Reasoning</h4>
+            <p>So, with regards to the state of AI research at the moment, the story goes that we trained a model to predict the next token in a sentence, essentially to autocomplete text, on the entire internet. This model is huge, has this massive space, and eventually got extremely good at knowing what would come next. The result of this is that it was also good at being right about things (for the most part) because a lot of the time, the most likely answer is also the correct one. So if you asked it a question, and it simulated to itself beginning to answer your question, it would be pretty good at getting there.</p>
+            <p>Then we began to ask ourselves well how can we make these models really smart, rather than just seeming smart. How do we make them represent the soundest and most profound way of thinking about the question?  Is the average representation of all the human text on the internet, reasonable? According to Kumar, Clune, Lehman, and Stanley, it&rsquo;s not - it&rsquo;s fractured and entangled. So, we are trying to use reinforecment learning to patch the confused mind of the AI in order for it to reason well, like taking a person whose seen and heard it all and trying to get them to make sense of things.</p>
+            <p>Can we whack this thing into shape, or do we need to retrain the models from scratch on data that necessarily follows strict logical rules, rather than the vast and messy content of the internet? Maybe then the models would really only know how to form concepts that logically follow, and would be better suited to guide us towards insight into coherent truths. But what would that model even be like? What would it mean to only be able to think in logical truths?</p>
+            <h4>Geometry of the Self</h4>
+            <p>This makes me wonder about the way in which our human minds represent our concepts, and to what extent our inner worlds are fractured and entangled versus compositional and clean. In particular, I wonder about the representation that I have of myself in the manifold of my mind. If I perturbed that vector, how much else would change? If I perturbed it enough, would I be somebody else entirely? Would I start to believe things I never believed because who-I-think-I-am has shifted, and therefore everything that follows from that, has too?</p>
+            <p>In a lot of my experience I don&rsquo;t have doubt about whether I am staying the same self, so this representation must be relatively coherent. There must be some mechanism, some strong force field in the state space that pushes it together - it would take far too much energy to move everything else around, if the representation of who I am shifted, so its locked in place through the pressure of the interconnected contingencies.</p>
+            <p>That takes the shape of narrative in my experience. It surfaces in my perception as ideas about who I am and in particular, fears of any evidence that those ideas may not be true. People may refer to this as ego, although I find that has negative connotations which may be unhelpful. This attachment to being what your mind has converged on representing you as, and pushing away from thing that steer that vector, because of the energy it would take to reorganize everything else.</p>
+            <h4>Reconfiguration</h4>
+            <p>For me, the awareness of that allows for the relationship with myself, my past, my concepts, my ideas of how and who I am, to be seen from a mathematical perspective, as fields or forces pushing against one another, and that makes it somehow less sticky, and I can have compassion for the system that is governing my experience and understand the nature of the friction I perceive as discomfort. The practice is to let the vectors move, slowly over time, to allow the reconfiguration, which I do ultimately want to happen, despite the experience of frustration it creates.</p>
+
+          </div>
+          <div class="thought-collapse"><button>Close</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- Poetry -->
   <section id="poetry" class="section section-poetry">
     <div class="container">
@@ -775,74 +843,6 @@
     </div>
   </section>
 
-  <!-- Thoughts -->
-  <section id="thoughts" class="section section-thoughts">
-    <div class="container">
-      <header class="section-header">
-        <h2 class="section-title">Thoughts</h2>
-      </header>
-      <div class="thoughts-list">
-
-        <article class="thought" id="identity-geometry">
-          <div class="thought-header">
-            <h3 class="thought-title">Identity Geometry</h3>
-            <time class="thought-date">March 2026</time>
-          </div>
-          <p class="thought-preview">At the intersection of human and artificial minds there is an open question about what it means to have an identity at all - why it arises, what it does, and whether it is helpful or harmful for a&hellip;</p>
-          <div class="thought-body">
-            <p>At the intersection of human and artificial minds there is an open question about what it means to have an identity at all - why it arises, what it does, and whether it is helpful or harmful for a learning system.</p>
-            <h4>A symphony of selves</h4>
-            <p>When I try to formulate a concrete concept of who I am and what I am like, each of the various forms dissolves under examination. They attach themselves to hooks about my motivations, my relationships, the way I want to be seen, and they justify themselves. They begin to feel real enough that I can put them on, and then they slip away.</p>
-            <p>I can feel the collection of my narrative selves arguing with one another, each one tugging at a different possibility: who to be, how to be her, what would make sense. I'm drawn to the belief that there is a higher self, or a truer self, which is the amalgamation of all of them &mdash; the thing from which they arise and to which they return. But the construction of my reality, my interactions, my decisions, day to day, is constantly in exchange with this orchestra of stories.</p>
-            <p>Take mathematics. I was drawn to it at a time when developing and growing and being in the world felt deeply confusing, in all the ways it does when you are still assembling yourself. When I sat and thought about the abstract world of math, it made sense and I had a sure way of being right about something.</p>
-            <p>Over time it became something more layered - both a thing in itself and a story about who I was. It paved the way for a lot of what unraveled for me: the research, the people I met through it; it was a toolkit I used to formulate abstractions about the way things change and form relations with each other, the way spaces deform and objects move within them, a particular lens I could peer at life through.</p>
-            <p>And now my relationship to math is both beautiful and heavy. The pure appreciation and awe is ever present, but there is also frustration: as my identity evolves around it and my attention lands on other things in other ways, I settle into the magnitude of what I will never fully understand. The depth of the thing exceeds what I can hold.</p>
-            <p>All of that to say: if you were to probe the representation of mathematics in my mind, you wouldn't find a clean, context-free concept. You would find something entangled with emotion, with self-construction, with the particular moment in life when I first reached for it. And I wonder, why is that? Why do we wrap our representations so deeply in the history of how we formed and what we needed? What is it about minds that makes things matter, and binds concepts to the self?</p>
-            <h4>Interpreting the model</h4>
-            <p>This is what makes the question so interesting when you turn it toward large language models. With these systems, you actually can do these probes. Representation engineering and linear probing methods - techniques for reading information encoded in a model's internal activations - make it possible to locate where and how a concept lives in the model's geometry, and to ask questions about the relationship between different versions of the same idea.</p>
-            <p>Recent work extracting persona vectors from model activations has shown that personality-relevant information is genuinely structured in that space &mdash; not just a surface behavior but something with geometric shape (Chen et al., 2025). The question is how deep that structure goes, and what it's connected to.</p>
-            <p>I'm interested in whether the way a model represents a concept in relation to itself is geometrically equivalent to how it represents that concept in theory, or in relation to others. Are there clean transformations between a model's concept of itself being honest, and you telling the truth, and a politician making a promise, and a character in a novel confessing something? How does any of that translate into the model actually being honest?</p>
-            <p>This last question is the personality illusion. Han et al. (2025) showed that RLHF-trained models produce stable, internally consistent self-reported personality profiles, and that those profiles are surprisingly weak predictors of how the model actually behaves on tasks designed to measure the same traits. The self-concept and the behavioral disposition are already coming apart at the text level, and I want to know where they come apart in the geometry.</p>
-            <p>I see the gap between a model's self-concept, its behavioral disposition, and its self-report as a hook to legibility: being able to actually understand the model, and eventually, the models&rsquo;s ability to understand us.</p>
-            <p>We can probe current models with classifiers trained on activations and contrastive steering experiments, methods developed in representation engineering (Zou et al., 2023). There is even evidence of what Binder et al. (2024) call privileged self-prediction &mdash; models predict their own future behavior better than other models can, which suggests some form of internal self-access exists, though its mechanism remains unidentified.</p>
-            <p>The question is what we find when we look more carefully: whether the model's identity, such as it is, is coherent across these different modes of representation, or whether it is, like mine sometimes feels, a collection of narratives that are at times in conflict, that rise and rest from the deeper mystery of the self.</p>
-
-          </div>
-          <div class="thought-collapse"><button>Close</button></div>
-        </article>
-
-        <article class="thought" id="pondering-the-mind-manifold">
-          <div class="thought-header">
-            <h3 class="thought-title">Pondering the Mind Manifold</h3>
-            <time class="thought-date">December 2025</time>
-          </div>
-          <p class="thought-preview">Lately I’ve been enjoying imagining the space of my mind as a latent space of a neural network - a high-dimensional manifold, folded in such a way that every concept I hold can be unfurled to reveal&hellip;</p>
-          <div class="thought-body">
-            <h4>Latent Space of Mind</h4>
-            <p>Lately I&rsquo;ve been enjoying imagining the space of my mind as a latent space of a neural network - a high-dimensional manifold, folded in such a way that every concept I hold can be unfurled to reveal further hidden associations, such that two ideas might appear close along some axes but distant along others. Thinking this way helps conceptualize experience not as a flat sequence of thoughts and feelings, but as trajectories through a richly structured geometry.</p>
-            <p>What intrigues me is that this mind-manifold isn&rsquo;t just filled with concepts. In its rich and convoluted landscape, it also contains my ways of forming concepts: my habits, intuitions, tendencies, and methods of meaning-making. Every moment of my experience is invoking a hierarchical, complex traversal of this space, through the representation of what I&rsquo;m seeing, how I&rsquo;m seeing it, what it means to me, and how I&rsquo;m holding myself throughout that moment, in my body, and in the seat of my mind. My sensation, thoughts, and actions are a continuous, interconnected choreography: activating one region inevitably excites a constellation of others in a never-ending, cosmic brain-dance.</p>
-            <p>Given the mind as a manifold, one might naturally start wondering: How is this space structured? How does it change as I gain new experiences? What makes one explanation feel coherent, useful, and satisfying, while another falls flat?</p>
-            <h4>Latent Space of AI</h4>
-            <p>The idea of the structure of the manifold of mind is a perfect analogy for the modern neural network. There&rsquo;s this paper, Questioning Representational Optimism in Deep Learning: The Fractured Entangled Representation Hypothesis , which contrasts two possibilities for learned representations in AI systems: firstly the Unified Factored Representation (UFR): where the internal geometry of a model is clean, compositional, and coherent, such that related things cluster together; knowledge generalizes smoothly, and secondly the Fractured Entangled Representation (FER): where representations are messy, fragmented, and inconsistent. Related concepts are scattered across the space, far apart when they should be near, degrading the system&rsquo;s capacity to generalize, learn continually, or be creative.</p>
-            <p>This also relates to the interpretability work being done at GoodFire, Understanding Memory in Loss Curvature, where they are trying to understand how to identify whether a network is storing concepts in a way that are &ldquo;general&rdquo; - which means if I perturbed the activation vector representing one concept, that would result in a large shift in the representations of other concepts, or not. They call the former &ldquo;reasoning&rdquo; and the latter &ldquo;memory&rdquo;, and go on to show that the results of their experiments suggest that these LLMs are memorizing concepts like math, but reasoning through concepts like boolean logic (If I perturb the representation of &ldquo;if&rdquo; in my LLM, everything else that it represents reacts to that perturbation).</p>
-            <h4>Reasoning</h4>
-            <p>So, with regards to the state of AI research at the moment, the story goes that we trained a model to predict the next token in a sentence, essentially to autocomplete text, on the entire internet. This model is huge, has this massive space, and eventually got extremely good at knowing what would come next. The result of this is that it was also good at being right about things (for the most part) because a lot of the time, the most likely answer is also the correct one. So if you asked it a question, and it simulated to itself beginning to answer your question, it would be pretty good at getting there.</p>
-            <p>Then we began to ask ourselves well how can we make these models really smart, rather than just seeming smart. How do we make them represent the soundest and most profound way of thinking about the question?  Is the average representation of all the human text on the internet, reasonable? According to Kumar, Clune, Lehman, and Stanley, it&rsquo;s not - it&rsquo;s fractured and entangled. So, we are trying to use reinforecment learning to patch the confused mind of the AI in order for it to reason well, like taking a person whose seen and heard it all and trying to get them to make sense of things.</p>
-            <p>Can we whack this thing into shape, or do we need to retrain the models from scratch on data that necessarily follows strict logical rules, rather than the vast and messy content of the internet? Maybe then the models would really only know how to form concepts that logically follow, and would be better suited to guide us towards insight into coherent truths. But what would that model even be like? What would it mean to only be able to think in logical truths?</p>
-            <h4>Geometry of the Self</h4>
-            <p>This makes me wonder about the way in which our human minds represent our concepts, and to what extent our inner worlds are fractured and entangled versus compositional and clean. In particular, I wonder about the representation that I have of myself in the manifold of my mind. If I perturbed that vector, how much else would change? If I perturbed it enough, would I be somebody else entirely? Would I start to believe things I never believed because who-I-think-I-am has shifted, and therefore everything that follows from that, has too?</p>
-            <p>In a lot of my experience I don&rsquo;t have doubt about whether I am staying the same self, so this representation must be relatively coherent. There must be some mechanism, some strong force field in the state space that pushes it together - it would take far too much energy to move everything else around, if the representation of who I am shifted, so its locked in place through the pressure of the interconnected contingencies.</p>
-            <p>That takes the shape of narrative in my experience. It surfaces in my perception as ideas about who I am and in particular, fears of any evidence that those ideas may not be true. People may refer to this as ego, although I find that has negative connotations which may be unhelpful. This attachment to being what your mind has converged on representing you as, and pushing away from thing that steer that vector, because of the energy it would take to reorganize everything else.</p>
-            <h4>Reconfiguration</h4>
-            <p>For me, the awareness of that allows for the relationship with myself, my past, my concepts, my ideas of how and who I am, to be seen from a mathematical perspective, as fields or forces pushing against one another, and that makes it somehow less sticky, and I can have compassion for the system that is governing my experience and understand the nature of the friction I perceive as discomfort. The practice is to let the vectors move, slowly over time, to allow the reconfiguration, which I do ultimately want to happen, despite the experience of frustration it creates.</p>
-
-          </div>
-          <div class="thought-collapse"><button>Close</button></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-inner">
@@ -851,8 +851,8 @@
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#photos">Photos</a>
-        <a href="#poetry">Poetry</a>
         <a href="#thoughts">Thoughts</a>
+        <a href="#poetry">Poetry</a>
       </div>
       <div class="footer-contact">
         <a href="mailto:daphnedemekas@gmail.com">daphnedemekas@gmail.com</a>
