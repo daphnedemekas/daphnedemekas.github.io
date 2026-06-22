@@ -5,8 +5,7 @@ const path = require('path');
 
 const CONTENT_DIR = path.join(__dirname, 'content');
 const POEMS_DIR = path.join(CONTENT_DIR, 'poems');
-const THOUGHTS_DIR = path.join(CONTENT_DIR, 'thoughts');
-const RESEARCH_DIR = path.join(CONTENT_DIR, 'research');
+const ESSAYS_DIR = path.join(CONTENT_DIR, 'essays');
 const IMAGES_DIR = path.join(__dirname, 'images');
 const OUTPUT = path.join(__dirname, 'index.html');
 
@@ -192,9 +191,9 @@ function researchBodyToHtml(body) {
   return html;
 }
 
-function renderResearch(items) {
+function renderEssays(items) {
   if (items.length === 0) {
-    return '        <p class="empty-state">No research posts yet. Add .md files to content/research/</p>';
+    return '        <p class="empty-state">No essays yet. Add .md files to content/essays/</p>';
   }
   return items.map(t => {
     const slug = (t.meta.title || 'post').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
@@ -248,11 +247,10 @@ function renderPhotos(photos) {
 // --- Build ---
 
 const poems = readContentDir(POEMS_DIR);
-const thoughts = readContentDir(THOUGHTS_DIR);
-const research = readContentDir(RESEARCH_DIR);
+const essays = readContentDir(ESSAYS_DIR);
 const photos = readPhotos();
 
-console.log(`Found ${poems.length} poems, ${thoughts.length} thoughts, ${research.length} research, ${photos.length} photos`);
+console.log(`Found ${poems.length} poems, ${essays.length} essays, ${photos.length} photos`);
 
 const html = `<!DOCTYPE html>
 <html lang="en">
@@ -278,9 +276,8 @@ const html = `<!DOCTYPE html>
     <div class="nav-links" id="navLinks">
       <a href="#home" class="nav-link">Home</a>
       <a href="#about" class="nav-link">About</a>
-      <a href="#research" class="nav-link">Research</a>
+      <a href="#essays" class="nav-link">Essays</a>
       <a href="#photos" class="nav-link">Photos</a>
-      <a href="#thoughts" class="nav-link">Thoughts</a>
       <a href="#poetry" class="nav-link">Poetry</a>
     </div>
   </nav>
@@ -294,14 +291,11 @@ const html = `<!DOCTYPE html>
         <a href="#about" class="home-card">
           <span class="home-card-label">About</span>
         </a>
-        <a href="#research" class="home-card">
-          <span class="home-card-label">Research</span>
+        <a href="#essays" class="home-card">
+          <span class="home-card-label">Essays</span>
         </a>
         <a href="#photos" class="home-card">
           <span class="home-card-label">Photos</span>
-        </a>
-        <a href="#thoughts" class="home-card">
-          <span class="home-card-label">Thoughts</span>
         </a>
         <a href="#poetry" class="home-card">
           <span class="home-card-label">Poetry</span>
@@ -457,14 +451,14 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Research -->
-  <section id="research" class="section section-research">
+  <!-- Essays -->
+  <section id="essays" class="section section-research">
     <div class="container">
       <header class="section-header">
-        <h2 class="section-title">Research</h2>
+        <h2 class="section-title">Essays</h2>
       </header>
       <div class="thoughts-list">
-${renderResearch(research)}
+${renderEssays(essays)}
       </div>
     </div>
   </section>
@@ -477,18 +471,6 @@ ${renderResearch(research)}
       </header>
       <div class="photo-gallery" id="photoGallery">
 ${renderPhotos(photos)}
-      </div>
-    </div>
-  </section>
-
-  <!-- Thoughts -->
-  <section id="thoughts" class="section section-thoughts">
-    <div class="container">
-      <header class="section-header">
-        <h2 class="section-title">Thoughts</h2>
-      </header>
-      <div class="thoughts-list">
-${renderThoughts(thoughts)}
       </div>
     </div>
   </section>
@@ -511,9 +493,8 @@ ${renderPoems(poems)}
       <div class="footer-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#research">Research</a>
+        <a href="#essays">Essays</a>
         <a href="#photos">Photos</a>
-        <a href="#thoughts">Thoughts</a>
         <a href="#poetry">Poetry</a>
       </div>
       <div class="footer-contact">
