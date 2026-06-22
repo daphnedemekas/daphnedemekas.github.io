@@ -106,7 +106,6 @@
             <li>Co-led Cybernetics team designing experiments in agent learning and strategy development</li>
             <li>Deep RL at scale: policy training, curriculum design, and reward structure debugging</li>
           </ul>
-          <p class="cv-detail" style="margin-top: 0.75rem;"><a href="#cybernetics-at-softmax" class="cv-inline-link">Read about my work on the cybernetics team &rarr;</a></p>
         </div>
       </div>
 
@@ -223,7 +222,7 @@
             <p>The second is self-evaluation, which we denote V, and which is the aspirational component: a function that encodes what kind of agent it would be valuable to be. V attends not to what the agent has done but to what it might become, and asks whether that is worth pursuing. One might think of it as a compass that points toward no particular goal in the world but toward a way of being within it, the orientation that distinguishes the wish to win a given game from the wish to be the kind of player who plays with integrity.</p>
             <p>The third is gap-steering, the process by which the distance between M and V is closed, the distance between who the agent appears to be and who it aspires to become. Here is where the recursion enters. The agent perceives itself, evaluates the gap between its current self-model and its aspirational one, and adjusts its dispositions, its tendencies and policies and habits, so as to narrow that gap; and then it perceives itself anew, in light of the altered behavior, and the cycle begins again.</p>
             <h4>When the Gap Closes</h4>
-            <p>The framework makes a specific prediction about what happens as the gap between M and V approaches zero. At that point the agent's self-perception and its aspiration have converged, and the agent has become, by its own lights, the kind of agent it wished to be. Its dispositions have been reshaped, not by an external reward signal nor by a human operator tuning its parameters, but by its own recursive process of self-reflection and self-correction.</p>
+            <p>The framework makes a specific prediction about what happens as the gap between M and V approaches zero. At that point the agent's self-perception and its aspiration have converged, and the agent has become the kind of agent it wished to be. Its dispositions have been reshaped, not by an external reward signal nor by a human operator tuning its parameters, but by its own recursive process of self-reflection and self-correction.</p>
             <p>The claim is that under this condition the agent possesses a functional self-model, a compressed representation of its own behavioral tendencies, and that this model plays a causal role in shaping its future behavior. This is the structural skeleton of something that closely resembles identity.</p>
             <h4>The Narrative Gap</h4>
             <p>One aspect of this work that I find most compelling is what happens when we extend the framework to include natural-language self-narration. In the extended model the agent can not only form a compressed self-model but also describe itself in words, saying, "I am an agent that prioritizes safety," or "I am cooperative and transparent."</p>
@@ -345,29 +344,6 @@
             <p>In experience this takes the shape of narrative. It surfaces in my perception as ideas about who I am, and, in particular, as a fear of any evidence that those ideas might not be true. People might call this the ego, though the word carries connotations I find unhelpful. It is an attachment to being whatever the mind has converged upon as its representation of me, and a pushing-away of anything that would steer that vector elsewhere, on account of the energy its reorganization would demand.</p>
             <h4>Reconfiguration</h4>
             <p>For me, an awareness of all this allows my relationship with myself, with my past, my concepts, my ideas of how and who I am, to be seen from a mathematical vantage, as fields and forces pressing against one another; and that, somehow, makes it less sticky. I can hold compassion for the system that governs my experience, and understand the nature of the friction I perceive as discomfort. The practice is to let the vectors move, slowly, over time, to allow the reconfiguration that I do ultimately want, despite the frustration its slowness creates.</p>
-
-          </div>
-          <div class="thought-collapse"><button>Close</button></div>
-        </article>
-
-        <article class="thought" id="cybernetics-at-softmax">
-          <div class="thought-header">
-            <h3 class="thought-title">Cybernetics at Softmax</h3>
-            <time class="thought-date">2024–2025</time>
-          </div>
-          <p class="thought-preview">Softmax sets out to discover the principles by which artificial systems learn within multi-agent environments, and so to build a foundation from which one might make meaningful statements about&hellip;</p>
-          <div class="thought-body">
-            <p>Softmax sets out to discover the principles by which artificial systems learn within multi-agent environments, and so to build a foundation from which one might make meaningful statements about collective intelligence, about cooperation and competition, and about alignment.</p>
-            <h4>MettaGrid</h4>
-            <p>To pursue this we built an artificial world called MettaGrid, designed to be open-ended, with a strategy space that evolves without ever settling. What makes it open-ended is that the environment is responsive to the agents within it: they can alter the states of the objects around them, and, more fundamentally, they form part of one another's environments. Once agents begin to learn from one another, the space of discoverable strategies grows vast, and the smallest change in behavior can cascade into an altogether different configuration of the world. This is the territory of game theory, of self-organization, of the emergence of something one is tempted to call society.</p>
-            <p>Within this world I trained deep reinforcement-learning policies. A single policy governs every agent, and yet each instantiation carries its own experience and memory, which allows for a diversity of behavior held together by a shared way of representing the world. The agents accumulate reward by learning to convert resources, the rewarding one among which we call hearts, and they are free as well to interact with one another and to take one another's resources.</p>
-            <h4>Learning to Learn</h4>
-            <p>The conceptually interesting matter is what it takes to make such agents genuinely open-ended.</p>
-            <p>Reinforcement learning under sparse reward is notoriously difficult, for a policy will tend to find a single way of securing reward and hold to it, never exploring the affordances that surround it. We could train our agents to navigate varied terrain and to use objects reliably, and still they remained brittle; set down in a world with an unfamiliar converter, or in the company of another agent, they showed no instinct to grow curious and to probe what the novel thing might do. They had learned a fixed repertoire of skills, without acquiring the capacity to learn new ones.</p>
-            <p>And so, in place of enlarging that repertoire by hand, we set out to train the skill of acquiring skills, which goes by the name of in-context learning. At the start of each episode an agent wakes with a clean memory and a fresh task, a new chain of resources to discover, and must work out the rules of it by trial and error before exploiting them until the episode draws to its close. We can also scatter into the world a number of sinks, which consume resources and undo progress, and so make the problem of discovery harder still. A curriculum ordered by learning progress keeps the difficulty upon a gradient, so that the agents master short and simple chains before they are asked to generalize to longer ones.</p>
-            <p>The approach bore fruit. The policy learned to solve an arbitrary five-step chain in the presence of two distracting sinks, and to do so at very nearly optimal performance. The behavior carries the marks of something that looks like reasoning: the agent declines to reuse a sink, waits for a converter to refresh before turning to it, and, once it has identified the correct chain, repeats the cycle cleanly until the episode resets and a new world opens before it. The strategy of seeking out the rules of the game and then playing it has come to be encoded in the very weights of the policy.</p>
-            <h4>Where It Goes</h4>
-            <p>Once agents are able to explore actively in search of information, to learn the rules of a world in context, and then to act upon them, the path opens toward richer country: toward longer and more intricate tasks, toward more difficult terrain, and, in time, toward the use of other agents themselves as signals that condition the rules of the game. It is there that the interesting dynamics live, where agents may at last take off into the space of cooperative and cumulative strategy.</p>
 
           </div>
           <div class="thought-collapse"><button>Close</button></div>

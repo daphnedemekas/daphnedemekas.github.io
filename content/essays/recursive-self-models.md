@@ -26,7 +26,7 @@ The third is gap-steering, the process by which the distance between M and V is 
 
 ## When the Gap Closes
 
-The framework makes a specific prediction about what happens as the gap between M and V approaches zero. At that point the agent's self-perception and its aspiration have converged, and the agent has become, by its own lights, the kind of agent it wished to be. Its dispositions have been reshaped, not by an external reward signal nor by a human operator tuning its parameters, but by its own recursive process of self-reflection and self-correction.
+The framework makes a specific prediction about what happens as the gap between M and V approaches zero. At that point the agent's self-perception and its aspiration have converged, and the agent has become the kind of agent it wished to be. Its dispositions have been reshaped, not by an external reward signal nor by a human operator tuning its parameters, but by its own recursive process of self-reflection and self-correction.
 
 The claim is that under this condition the agent possesses a functional self-model, a compressed representation of its own behavioral tendencies, and that this model plays a causal role in shaping its future behavior. This is the structural skeleton of something that closely resembles identity.
 

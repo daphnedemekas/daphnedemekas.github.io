@@ -360,7 +360,6 @@ const html = `<!DOCTYPE html>
             <li>Co-led Cybernetics team designing experiments in agent learning and strategy development</li>
             <li>Deep RL at scale: policy training, curriculum design, and reward structure debugging</li>
           </ul>
-          <p class="cv-detail" style="margin-top: 0.75rem;"><a href="#cybernetics-at-softmax" class="cv-inline-link">Read about my work on the cybernetics team &rarr;</a></p>
         </div>
       </div>
 
