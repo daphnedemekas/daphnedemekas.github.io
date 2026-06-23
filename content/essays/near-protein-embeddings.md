@@ -1,6 +1,6 @@
 ---
 title: Proteins as Language
-date: January 2025
+date: January 2026
 order: 2
 ---
 

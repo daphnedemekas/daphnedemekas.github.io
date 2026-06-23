@@ -1,6 +1,6 @@
 ---
 title: Identity Geometry
-date: March 2026
+date: September 2025
 order: 4
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: The Free Energy Principle and Emotion Recognition
-date: 2020
+date: November 2025
 order: 3
 ---
 

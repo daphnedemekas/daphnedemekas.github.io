@@ -1,6 +1,6 @@
 ---
 title: Recursive Self-Modeling
-date: 2025
+date: March 2026
 order: 1
 ---
 

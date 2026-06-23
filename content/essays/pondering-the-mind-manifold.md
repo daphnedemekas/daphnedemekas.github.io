@@ -1,6 +1,6 @@
 ---
 title: Pondering the Mind Manifold
-date: December 2025
+date: July 2025
 order: 5
 ---
 
