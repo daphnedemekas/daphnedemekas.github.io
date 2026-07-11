@@ -6,6 +6,7 @@ const path = require('path');
 const CONTENT_DIR = path.join(__dirname, 'content');
 const POEMS_DIR = path.join(CONTENT_DIR, 'poems');
 const ESSAYS_DIR = path.join(CONTENT_DIR, 'essays');
+const PROSE_DIR = path.join(CONTENT_DIR, 'prose');
 const IMAGES_DIR = path.join(__dirname, 'images');
 const OUTPUT = path.join(__dirname, 'index.html');
 
@@ -111,8 +112,9 @@ function thoughtBodyToHtml(body) {
 
 function getPreviewText(body) {
   // Get first paragraph of plain text for the preview
-  const lines = body.split('\n').filter(l => l.trim() && !l.trim().startsWith('##'));
-  const first = lines.slice(0, 3).join(' ').trim();
+  const lines = body.split('\n').filter(l => l.trim() && !l.trim().startsWith('##') && !l.trim().startsWith('$$'));
+  const first = lines.slice(0, 3).join(' ').trim()
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '$1');
   // Trim to ~200 chars at word boundary
   if (first.length <= 200) return escapeHtml(first);
   return escapeHtml(first.slice(0, 200).replace(/\s+\S*$/, '')) + '&hellip;';
@@ -150,6 +152,7 @@ function researchBodyToHtml(body) {
   function flushParagraph() {
     if (paragraphLines.length > 0) {
       const text = paragraphLines.join(' ')
+        .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
         .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
         .replace(/\*(.+?)\*/g, '<em>$1</em>')
         .replace(/\u201c/g, '&ldquo;').replace(/\u201d/g, '&rdquo;')
@@ -174,6 +177,19 @@ function researchBodyToHtml(body) {
                 <source src="media/${file}" type="video/mp4">
               </video>
             </div>\n`;
+      continue;
+    }
+
+    // Equation block: $$ ... $$ on its own line
+    const eqMatch = trimmed.match(/^\$\$(.+)\$\$$/);
+    if (eqMatch) {
+      flushParagraph();
+      const eq = escapeHtml(eqMatch[1].trim())
+        .replace(/\^\{([^}]*)\}/g, '<sup>$1</sup>')
+        .replace(/_\{([^}]*)\}/g, '<sub>$1</sub>')
+        .replace(/\^(\w)/g, '<sup>$1</sup>')
+        .replace(/_(\w)/g, '<sub>$1</sub>');
+      html += `            <div class="equation">${eq}</div>\n`;
       continue;
     }
 
@@ -248,9 +264,10 @@ function renderPhotos(photos) {
 
 const poems = readContentDir(POEMS_DIR);
 const essays = readContentDir(ESSAYS_DIR);
+const prose = readContentDir(PROSE_DIR);
 const photos = readPhotos();
 
-console.log(`Found ${poems.length} poems, ${essays.length} essays, ${photos.length} photos`);
+console.log(`Found ${poems.length} poems, ${essays.length} essays, ${prose.length} prose pieces, ${photos.length} photos`);
 
 const html = `<!DOCTYPE html>
 <html lang="en">
@@ -277,6 +294,7 @@ const html = `<!DOCTYPE html>
       <a href="#home" class="nav-link">Home</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#essays" class="nav-link">Essays</a>
+      <a href="#prose" class="nav-link">Prose</a>
       <a href="#photos" class="nav-link">Photos</a>
       <a href="#poetry" class="nav-link">Poetry</a>
     </div>
@@ -293,6 +311,9 @@ const html = `<!DOCTYPE html>
         </a>
         <a href="#essays" class="home-card">
           <span class="home-card-label">Essays</span>
+        </a>
+        <a href="#prose" class="home-card">
+          <span class="home-card-label">Prose</span>
         </a>
         <a href="#photos" class="home-card">
           <span class="home-card-label">Photos</span>
@@ -451,13 +472,25 @@ const html = `<!DOCTYPE html>
   </section>
 
   <!-- Essays -->
-  <section id="essays" class="section section-research">
+  <section id="essays" class="section section-essays">
     <div class="container">
       <header class="section-header">
         <h2 class="section-title">Essays</h2>
       </header>
       <div class="thoughts-list">
 ${renderEssays(essays)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Prose -->
+  <section id="prose" class="section section-prose">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-title">Prose</h2>
+      </header>
+      <div class="thoughts-list">
+${renderEssays(prose)}
       </div>
     </div>
   </section>
@@ -493,6 +526,7 @@ ${renderPoems(poems)}
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#essays">Essays</a>
+        <a href="#prose">Prose</a>
         <a href="#photos">Photos</a>
         <a href="#poetry">Poetry</a>
       </div>

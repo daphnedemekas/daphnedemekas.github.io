@@ -4,7 +4,7 @@ date: September 2025
 order: 4
 ---
 
-At the meeting point of human and artificial minds there sits an open question about what it means to have an identity at all: why it arises, what work it does, and whether it serves or hinders a learning system.
+When regarding both human and artificial minds, there sits an open question about what it means to have an identity: why it arises, what work it does, and whether it serves or hinders a learning system.
 
 ## A symphony of selves
 

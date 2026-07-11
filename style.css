@@ -740,8 +740,12 @@ a:hover {
 }
 
 /* --- Thoughts --- */
-.section-research {
+.section-essays {
   background: var(--bg-alt);
+}
+
+.section-prose {
+  background: var(--bg);
 }
 
 .section-thoughts {
@@ -887,6 +891,34 @@ a:hover {
 .thought-body strong {
   font-weight: 500;
   color: var(--text);
+}
+
+.thought-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color var(--transition);
+}
+
+.thought-body a:hover {
+  color: var(--text-light);
+}
+
+.thought-body .equation {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  text-align: center;
+  color: var(--text);
+  margin: 1.75rem 0;
+  line-height: 1.5;
+}
+
+.thought-body .equation sub,
+.thought-body .equation sup {
+  font-style: normal;
+  font-size: 0.65em;
 }
 
 /* --- Footer --- */
