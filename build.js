@@ -344,7 +344,7 @@ const html = `<!DOCTYPE html>
         <div class="about-details">
           <p class="about-meta">San Francisco, CA &middot; <a href="mailto:daphnedemekas@gmail.com">daphnedemekas@gmail.com</a> &middot;</p>
         </div>
-        <p class="about-summary">An AI researcher focused on aligning AI systems with human cognition, development, and flourishing. Recently worked with Emmett Shear at Softmax (an AI alignment company). Currently a member at South Park Commons, co-founding an AI company building foundation models trained on human behavior.</p>
+        <p class="about-summary">An AI researcher focused on aligning AI systems with human cognition, development, and flourishing. Recently worked with Emmett Shear at Softmax (an AI alignment company). Recently co-founded Mind at Large, an AI company building foundation models trained on human behavior.</p>
       </div>
 
       <div class="cv-section">
@@ -370,6 +370,22 @@ const html = `<!DOCTYPE html>
 
       <div class="cv-section">
         <h3 class="cv-heading">Recent Work</h3>
+        <div class="cv-entry">
+          <div class="cv-entry-header">
+            <h4>Founder &amp; CTO &mdash; Mind at Large</h4>
+            <span class="cv-date">Jan 2026 &ndash; Present</span>
+          </div>
+          <ul class="cv-list">
+            <li>Co-founded with George Deane, training foundation models on body and brain data</li>
+            <li>Building a new wave of closed-loop wellbeing technology</li>
+          </ul>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-entry-header">
+            <h4>Visiting Scholar &mdash; <a href="https://humancompatible.ai/" target="_blank" rel="noopener">Center for Human-Compatible AI (CHAI)</a>, UC Berkeley</h4>
+            <span class="cv-date">2026 &ndash; Present</span>
+          </div>
+        </div>
         <div class="cv-entry">
           <div class="cv-entry-header">
             <h4>Founding Engineer &mdash; <a href="https://softmax.com/" target="_blank" rel="noopener">Softmax</a></h4>
