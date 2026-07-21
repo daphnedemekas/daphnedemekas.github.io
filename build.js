@@ -369,7 +369,7 @@ const html = `<!DOCTYPE html>
       </div>
 
       <div class="cv-section">
-        <h3 class="cv-heading">Recent Work</h3>
+        <h3 class="cv-heading">Current Work</h3>
         <div class="cv-entry">
           <div class="cv-entry-header">
             <h4>Founder &amp; CTO &mdash; Mind at Large</h4>
@@ -385,18 +385,6 @@ const html = `<!DOCTYPE html>
             <h4>Visiting Scholar &mdash; <a href="https://humancompatible.ai/" target="_blank" rel="noopener">Center for Human-Compatible AI (CHAI)</a>, UC Berkeley</h4>
             <span class="cv-date">2026 &ndash; Present</span>
           </div>
-        </div>
-        <div class="cv-entry">
-          <div class="cv-entry-header">
-            <h4>Founding Engineer &mdash; <a href="https://softmax.com/" target="_blank" rel="noopener">Softmax</a></h4>
-            <span class="cv-date">Sep 2023 &ndash; Jan 2026</span>
-          </div>
-          <ul class="cv-list">
-            <li>Joined as third employee and wrote core technical stack</li>
-            <li>Multi-agent reinforcement learning environment studying emergent coordination and alignment</li>
-            <li>Co-led Cybernetics team designing experiments in agent learning and strategy development</li>
-            <li>Deep RL at scale: policy training, curriculum design, and reward structure debugging</li>
-          </ul>
         </div>
       </div>
 
@@ -431,6 +419,18 @@ const html = `<!DOCTYPE html>
         <h3 class="cv-heading">Past Work</h3>
         <div class="cv-entry">
           <div class="cv-entry-header">
+            <h4>Founding Engineer &mdash; <a href="https://softmax.com/" target="_blank" rel="noopener">Softmax</a></h4>
+            <span class="cv-date">Sep 2023 &ndash; Jan 2026</span>
+          </div>
+          <ul class="cv-list">
+            <li>Joined as third employee and wrote core technical stack</li>
+            <li>Multi-agent reinforcement learning environment studying emergent coordination and alignment</li>
+            <li>Co-led Cybernetics team designing experiments in agent learning and strategy development</li>
+            <li>Deep RL at scale: policy training, curriculum design, and reward structure debugging</li>
+          </ul>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-entry-header">
             <h4>Software Scientist &mdash; <a href="http://wheelerlab.org/" target="_blank" rel="noopener">Wheeler Lab</a>, University of Arizona</h4>
             <span class="cv-date">Jan 2023 &ndash; Aug 2024</span>
           </div>
@@ -445,8 +445,8 @@ const html = `<!DOCTYPE html>
             <span class="cv-date">May 2022 &ndash; Sep 2022</span>
           </div>
           <ul class="cv-list">
-            <li>Collaborated with <a href="https://www.vam.ac.uk/" target="_blank" rel="noopener">Victoria &amp; Albert Museum</a>; fine-tuned diffusion models on museum collection</li>
-            <li>Developed demonstration platform for exhibition showing generated image combinations across collection themes and styles</li>
+            <li>Fine-tuned diffusion models on the <a href="https://www.vam.ac.uk/" target="_blank" rel="noopener">Victoria &amp; Albert Museum</a> collection, in partnership between the V&amp;A and UC Berkeley</li>
+            <li>Built an interactive platform and ran a hands-on museum workshop where visitors used it to generate AI images blending styles, eras, artists, and materials from across the collection</li>
           </ul>
         </div>
         <div class="cv-entry">
