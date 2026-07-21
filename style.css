@@ -419,6 +419,14 @@ a:hover {
   font-style: italic;
 }
 
+.pub-desc {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  line-height: 1.65;
+}
+
 .cv-inline-link {
   font-size: 0.85rem;
   color: var(--text-light);

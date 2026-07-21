@@ -385,24 +385,37 @@ const html = `<!DOCTYPE html>
             <h4>Visiting Scholar &mdash; <a href="https://humancompatible.ai/" target="_blank" rel="noopener">Center for Human-Compatible AI (CHAI)</a>, UC Berkeley</h4>
             <span class="cv-date">2026 &ndash; Present</span>
           </div>
+          <ul class="cv-list">
+            <li>Building <em>Ways of Seeing</em>, a rule-induction game and randomized study of how different kinds of AI assistance shape human skill</li>
+            <li>Testing whether answer-giving help quietly deskills users, while help that coaches them to design experiments against their own ideas builds skill that transfers to unaided tasks</li>
+          </ul>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-entry-header">
+            <h4>Community Member &mdash; <a href="https://www.southparkcommons.com/" target="_blank" rel="noopener">South Park Commons</a></h4>
+            <span class="cv-date">Jan 2026 &ndash; Present</span>
+          </div>
         </div>
       </div>
 
       <div class="cv-section">
         <h3 class="cv-heading">Peer-Reviewed Publications</h3>
         <ol class="pub-list">
-          <li>Olsen, D., et al. (2025). <a href="https://academic.oup.com/bioinformatics/article/41/Supplement_1/i449/8199346" target="_blank" rel="noopener">&ldquo;NEAR: Neural Embeddings for Amino Acid Relationships.&rdquo;</a> <em>Bioinformatics.</em></li>
-          <li>Demekas, D., et al. (2023). <a href="https://link.springer.com/chapter/10.1007/978-3-031-47958-8_10" target="_blank" rel="noopener">&ldquo;An Analytical Model of Active Inference in the Iterated Prisoner&rsquo;s Dilemma.&rdquo;</a> <em>International Workshop on Active Inference (IWAI).</em></li>
-          <li>Heins, C., et al. (2023). <a href="https://link.springer.com/chapter/10.1007/978-3-031-28719-0_6" target="_blank" rel="noopener">&ldquo;Spin Glass Systems as Collective Active Inference.&rdquo;</a> <em>International Workshop on Active Inference (IWAI).</em></li>
-          <li>Albarracin, et al. (2022). <a href="https://www.mdpi.com/1099-4300/24/4/476" target="_blank" rel="noopener">&ldquo;Epistemic Communities Under Active Inference.&rdquo;</a> <em>Entropy.</em></li>
-          <li>Heins, C., Millidge, B., Demekas, D., et al. (2022). <a href="https://joss.theoj.org/papers/10.21105/joss.04098" target="_blank" rel="noopener">&ldquo;pymdp: A Python Library for Active Inference in Discrete State Spaces.&rdquo;</a> <em>Journal of Open Source Software.</em></li>
-          <li>Demekas, D., et al. (2020). <a href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2020.00030/full" target="_blank" rel="noopener">&ldquo;An Investigation of the Free Energy Principle for Emotion Recognition.&rdquo;</a> <em>Frontiers in Computational Neuroscience.</em></li>
+          <li>Demekas, D. &amp; Deane, G. (2025). <a href="https://sciety.org/articles/activity/10.31234/osf.io/u8y6f_v1" target="_blank" rel="noopener">&ldquo;Recursive self-models and minimal phenomenal experience.&rdquo;</a>
+            <span class="pub-desc">A computational architecture in which a policy that generates behavior is recursively coupled to a program model producing structured, executable explanations of it. The paper argues that minimal phenomenal experience arises when this self-modeling runs on simple, interoceptively focused programs rather than elaborate narratives.</span></li>
+          <li>Olsen, D., et al. (2025). <a href="https://academic.oup.com/bioinformatics/article/41/Supplement_1/i449/8199346" target="_blank" rel="noopener">&ldquo;NEAR: Neural Embeddings for Amino Acid Relationships.&rdquo;</a> <em>Bioinformatics.</em>
+            <span class="pub-desc">A lightweight neural model that computes per-residue embeddings and uses vector similarity search to filter protein sequences for homology, reaching higher accuracy and speed than HMMER&rsquo;s pre-filter while remaining far faster than large protein language models.</span></li>
+          <li>Demekas, D., et al. (2023). <a href="https://link.springer.com/chapter/10.1007/978-3-031-47958-8_10" target="_blank" rel="noopener">&ldquo;An Analytical Model of Active Inference in the Iterated Prisoner&rsquo;s Dilemma.&rdquo;</a> <em>International Workshop on Active Inference (IWAI).</em>
+            <span class="pub-desc">An analytically tractable model of two Bayesian active-inference agents playing the iterated Prisoner&rsquo;s Dilemma, deriving the conditions under which the system transitions between game-theoretic steady states and how those critical points depend on learning rate and reward.</span></li>
+          <li>Heins, C., et al. (2023). <a href="https://link.springer.com/chapter/10.1007/978-3-031-28719-0_6" target="_blank" rel="noopener">&ldquo;Spin Glass Systems as Collective Active Inference.&rdquo;</a> <em>International Workshop on Active Inference (IWAI).</em>
+            <span class="pub-desc">Shows that the collective dynamics of a class of active-inference agents is equivalent to sampling from a spin-glass system, so a suitably designed collective can implement Boltzmann-machine inference &mdash; an equivalence that proves fragile under small changes to the agents&rsquo; models or interactions.</span></li>
+          <li>Albarracin, et al. (2022). <a href="https://www.mdpi.com/1099-4300/24/4/476" target="_blank" rel="noopener">&ldquo;Epistemic Communities Under Active Inference.&rdquo;</a> <em>Entropy.</em>
+            <span class="pub-desc">An in silico active-inference model of confirmation bias that reproduces the formation of echo chambers on social networks, showing that once agents grow sufficiently certain of their beliefs they become very hard to move.</span></li>
+          <li>Heins, C., Millidge, B., Demekas, D., et al. (2022). <a href="https://joss.theoj.org/papers/10.21105/joss.04098" target="_blank" rel="noopener">&ldquo;pymdp: A Python Library for Active Inference in Discrete State Spaces.&rdquo;</a> <em>Journal of Open Source Software.</em>
+            <span class="pub-desc">An open-source Python library for building and simulating active-inference agents in discrete state spaces, providing modular tools for Bayesian inference and free-energy minimization.</span></li>
+          <li>Demekas, D., et al. (2020). <a href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2020.00030/full" target="_blank" rel="noopener">&ldquo;An Investigation of the Free Energy Principle for Emotion Recognition.&rdquo;</a> <em>Frontiers in Computational Neuroscience.</em>
+            <span class="pub-desc">A free-energy-principle framework for emotion recognition, proposing three waves of development: today&rsquo;s passive deep-learning classifiers, active-inference devices that elicit emotional responses, and reciprocal human&ndash;machine interactions in which both sides synchronize their generative models.</span></li>
         </ol>
-      </div>
-
-      <div class="cv-section">
-        <h3 class="cv-heading">Manuscripts in Preparation</h3>
-        <p class="cv-detail">Demekas, D. &amp; Deane, G. &ldquo;Recursive self-models and minimal phenomenal experience&rdquo;</p>
       </div>
 
       <div class="cv-section">
