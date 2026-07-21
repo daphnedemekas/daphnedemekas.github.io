@@ -344,7 +344,7 @@ const html = `<!DOCTYPE html>
         <div class="about-details">
           <p class="about-meta">San Francisco, CA &middot; <a href="mailto:daphnedemekas@gmail.com">daphnedemekas@gmail.com</a> &middot;</p>
         </div>
-        <p class="about-summary">An AI researcher focused on aligning AI systems with human cognition, development, and flourishing. Recently worked with Emmett Shear at Softmax (an AI alignment company). Recently co-founded Mind at Large, an AI company building foundation models trained on human behavior.</p>
+        <p class="about-summary">An AI researcher focused on aligning AI systems with human cognition, development, and flourishing. Recently worked with Emmett Shear at Softmax (an AI alignment company). Now I am co-founder of Mind at Large, an AI company building foundation models trained on body and brain data for wellbeing technology.</p>
       </div>
 
       <div class="cv-section">
