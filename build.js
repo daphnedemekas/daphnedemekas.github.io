@@ -327,6 +327,7 @@ const html = `<!DOCTYPE html>
         <div class="home-socials">
           <a href="https://github.com/daphnedemekas" target="_blank" rel="noopener">GitHub</a>
           <a href="https://uk.linkedin.com/in/daphne-demekas" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/daphwd" target="_blank" rel="noopener">Twitter</a>
           <a href="https://scholar.google.com/citations?hl=en&amp;user=oI6WRUUAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
         </div>
       </div>
@@ -342,9 +343,9 @@ const html = `<!DOCTYPE html>
 
       <div class="about-intro">
         <div class="about-details">
-          <p class="about-meta">San Francisco, CA &middot; <a href="mailto:daphnedemekas@gmail.com">daphnedemekas@gmail.com</a> &middot;</p>
+          <p class="about-meta">San Francisco, CA &middot; <a href="mailto:daphnedemekas@gmail.com">daphnedemekas@gmail.com</a> &middot; <a href="https://x.com/daphwd" target="_blank" rel="noopener">Twitter</a></p>
         </div>
-        <p class="about-summary">An AI researcher focused on aligning AI systems with human cognition, development, and flourishing. Recently worked with Emmett Shear at Softmax (an AI alignment company). Now I am co-founder of Mind at Large, an AI company building foundation models trained on body and brain data for wellbeing technology.</p>
+        <p class="about-summary">An AI researcher focused on aligning AI systems with human cognition, development, and flourishing. Recently worked with Emmett Shear at Softmax (an AI alignment company). Now I am cofounder of Mind at Large, an AI company building technology for rewiring and reprocessing pain.</p>
       </div>
 
       <div class="cv-section">
@@ -386,8 +387,8 @@ const html = `<!DOCTYPE html>
             <span class="cv-date">2026 &ndash; Present</span>
           </div>
           <ul class="cv-list">
-            <li>Building <em>Ways of Seeing</em>, a rule-induction game and randomized study of how different kinds of AI assistance shape human skill</li>
-            <li>Testing whether answer-giving help quietly deskills users, while help that coaches them to design experiments against their own ideas builds skill that transfers to unaided tasks</li>
+            <li>Researching how generative AI assistance shapes human learning: when it scaffolds a person&rsquo;s own reasoning versus when it quietly replaces it</li>
+            <li>Developing interaction architectures and measurement tools that preserve human cognitive effort, with outcomes judged by unassisted transfer rather than short-term task success</li>
           </ul>
         </div>
         <div class="cv-entry">
@@ -565,6 +566,8 @@ ${renderPoems(poems)}
         <a href="https://github.com/daphnedemekas" target="_blank" rel="noopener">GitHub</a>
         <span class="footer-divider">&middot;</span>
         <a href="https://uk.linkedin.com/in/daphne-demekas" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="footer-divider">&middot;</span>
+        <a href="https://x.com/daphwd" target="_blank" rel="noopener">Twitter</a>
       </div>
       <p class="footer-copy">&copy; 2026 Daphne Demekas</p>
     </div>
