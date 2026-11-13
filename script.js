@@ -109,23 +109,64 @@ photoOverlay.querySelector('.lightbox-next').addEventListener('click', nextPhoto
 photoOverlay.addEventListener('click', (e) => { if (e.target === photoOverlay) closePhoto(); });
 
 // --- Thoughts expand/collapse ---
+// Each essay has an id (its slug), so /#slug links straight to it.
+function setHash(id) {
+  const url = id ? `#${id}` : window.location.pathname + window.location.search;
+  history.replaceState(null, '', url);
+}
+
+function essayUrl(id) {
+  return `${window.location.origin}${window.location.pathname}#${id}`;
+}
+
 document.querySelectorAll('.thought').forEach(thought => {
-  const collapseBtn = thought.querySelector('.thought-collapse button');
+  const closeBtn = thought.querySelector('.thought-close');
+  const copyBtn = thought.querySelector('.thought-copy-link');
 
   thought.addEventListener('click', (e) => {
-    // Don't expand if clicking collapse button or already expanded
-    if (e.target === collapseBtn || thought.classList.contains('expanded')) return;
+    // Don't expand if clicking a control or already expanded
+    if (e.target.closest('.thought-collapse') || thought.classList.contains('expanded')) return;
     thought.classList.add('expanded');
+    if (thought.id) setHash(thought.id);
   });
 
-  if (collapseBtn) {
-    collapseBtn.addEventListener('click', (e) => {
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       thought.classList.remove('expanded');
+      if (window.location.hash === `#${thought.id}`) setHash('');
       thought.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   }
+
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const url = essayUrl(thought.id);
+      try {
+        await navigator.clipboard.writeText(url);
+        copyBtn.textContent = 'Link copied';
+      } catch {
+        window.prompt('Copy this link:', url);
+      }
+      setTimeout(() => { copyBtn.textContent = 'Copy link'; }, 2000);
+    });
+  }
 });
+
+// Open the essay named in the URL hash (e.g. daphnedemekas.com/#identity-geometry)
+function openEssayFromHash() {
+  const id = decodeURIComponent(window.location.hash.slice(1));
+  if (!id) return;
+  const target = document.getElementById(id);
+  if (!target || !target.classList.contains('thought')) return;
+  target.classList.add('expanded');
+  target.style.opacity = '';
+  requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+}
+
+openEssayFromHash();
+window.addEventListener('hashchange', openEssayFromHash);
 
 // --- Keyboard ---
 document.addEventListener('keydown', (e) => {

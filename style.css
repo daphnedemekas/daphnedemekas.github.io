@@ -862,6 +862,14 @@ a:hover {
   color: var(--text);
 }
 
+.thought-collapse button + button {
+  margin-left: 2rem;
+}
+
+.thought {
+  scroll-margin-top: 90px;
+}
+
 .thought-title {
   font-family: var(--font-serif);
   font-size: 1.8rem;

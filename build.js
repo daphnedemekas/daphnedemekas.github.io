@@ -259,7 +259,7 @@ function renderEssays(items) {
           <div class="thought-body">
 ${researchBodyToHtml(t.body)}
           </div>
-          <div class="thought-collapse"><button>Close</button></div>
+          <div class="thought-collapse"><button class="thought-copy-link" type="button">Copy link</button><button class="thought-close" type="button">Close</button></div>
         </article>`;
   }).join('\n');
 }
