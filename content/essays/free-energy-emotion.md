@@ -1,7 +1,7 @@
 ---
 title: The Free Energy Principle and Emotion Recognition
 date: November 2025
-order: 3
+order: 4
 ---
 
 Before I came to work on artificial systems, I worked at the intersection of mathematics and theoretical neuroscience. As a student at UCL I had the good fortune to work with Karl Friston and Thomas Parr at the Wellcome Trust Centre for Neuroimaging, the laboratory in which the free energy principle was then being developed as a unifying framework for the workings of the brain. The paper we wrote together, published in Frontiers in Computational Neuroscience in 2020, posed a question that has stayed with me ever since: what would it mean for a machine to recognize emotion in the way that a brain does?

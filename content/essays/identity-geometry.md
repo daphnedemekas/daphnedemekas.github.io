@@ -1,7 +1,7 @@
 ---
 title: Identity Geometry
 date: September 2025
-order: 4
+order: 5
 ---
 
 When regarding both human and artificial minds, there sits an open question about what it means to have an identity: why it arises, what work it does, and whether it serves or hinders a learning system.

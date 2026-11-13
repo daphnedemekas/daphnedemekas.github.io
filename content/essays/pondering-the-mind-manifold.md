@@ -1,7 +1,7 @@
 ---
 title: Pondering the Mind Manifold
 date: July 2025
-order: 5
+order: 6
 ---
 
 ## Latent Space of Mind

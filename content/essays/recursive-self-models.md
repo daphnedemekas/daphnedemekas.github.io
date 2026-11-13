@@ -1,7 +1,7 @@
 ---
 title: Recursive Self-Modeling
 date: March 2026
-order: 1
+order: 2
 ---
 
 At the meeting point of philosophy and engineering lies the question: can a system come to know itself? Not in a metaphysical sense, but quite concretely: as the capacity of an agent to form a compressed and meaningful understanding of what kind of agent it is, in a formalism it can parse, in order to evaluate whether that is the kind of agent it values being, and then to steer itself toward a self it values more. This is the question that George Deane and I set out to formalize in [our paper on Recursive Self-Modeling](https://sciety.org/articles/activity/10.31234/osf.io/u8y6f_v1), which was awarded the 2025 Computational Phenomenology of Pure Awareness Prize.

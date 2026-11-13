@@ -1,7 +1,7 @@
 ---
 title: Proteins as Language
 date: January 2026
-order: 2
+order: 3
 ---
 
 There is something deeply satisfying in the moment one realizes that two distant fields have been asking the same underlying question. For me that moment arrived in a bioinformatics laboratory at the University of Arizona, where I sat staring at protein sequences and thinking, all the while, about words.

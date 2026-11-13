@@ -144,12 +144,29 @@ ${thoughtBodyToHtml(t.body)}
 
 // --- Research rendering ---
 
+function formatInline(str) {
+  return str
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>');
+}
+
 function researchBodyToHtml(body) {
   const lines = body.split('\n');
   let html = '';
   let paragraphLines = [];
 
+  let quoteLines = [];
+
+  function flushQuote() {
+    if (quoteLines.length > 0) {
+      html += `            <blockquote><p>${formatInline(quoteLines.join(' '))}</p></blockquote>\n`;
+      quoteLines = [];
+    }
+  }
+
   function flushParagraph() {
+    flushQuote();
     if (paragraphLines.length > 0) {
       const text = paragraphLines.join(' ')
         .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
@@ -165,6 +182,24 @@ function researchBodyToHtml(body) {
 
   for (const line of lines) {
     const trimmed = line.trim();
+
+    // Interactive figure: [viz:name|Caption]
+    const vizMatch = trimmed.match(/^\[viz:([a-z0-9-]+)(?:\|(.+))?\]$/);
+    if (vizMatch) {
+      flushParagraph();
+      const caption = vizMatch[2] ? `<figcaption>${formatInline(vizMatch[2].trim())}</figcaption>` : '';
+      html += `            <figure class="viz" data-viz="${vizMatch[1]}">${caption}</figure>\n`;
+      continue;
+    }
+
+    // Blockquote: lines starting with "> "
+    if (trimmed.startsWith('> ')) {
+      if (paragraphLines.length) { const q = quoteLines; quoteLines = []; flushParagraph(); quoteLines = q; }
+      quoteLines.push(trimmed.slice(2));
+      continue;
+    } else if (quoteLines.length) {
+      flushQuote();
+    }
 
     // Video embed: [video:filename.mov]
     const videoMatch = trimmed.match(/^\[video:(.+?)\]$/);
@@ -277,6 +312,7 @@ const html = `<!DOCTYPE html>
   <title>Daphne Demekas</title>
   <meta name="description" content="AI researcher, writer, and thinker. Focused on aligning AI systems with human cognition, development, and flourishing.">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="viz.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -574,6 +610,7 @@ ${renderPoems(poems)}
   </footer>
 
   <script src="script.js"></script>
+  <script src="viz.js"></script>
 </body>
 </html>`;
 

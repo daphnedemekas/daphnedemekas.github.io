@@ -1,0 +1,124 @@
+/* --- Interactive essay figures --- */
+.thought-body figure.viz {
+  margin: 2.25rem 0 2.5rem;
+  cursor: default;
+}
+.viz-stage canvas { display: block; border-radius: 4px; }
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.viz-panel { display: flex; flex-direction: column; align-items: center; }
+.viz-panel-label,
+.viz-hint,
+.viz-slider-label {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.viz-panel-label { margin-top: 0.5rem; text-align: center; }
+.viz-controls {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+}
+.viz-note {
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 1.5em;
+}
+.viz-hint { text-transform: none; letter-spacing: 0.02em; font-size: 0.72rem; }
+.viz-btns { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.viz-btn {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+.viz-btn:hover { border-color: var(--text-faint); color: var(--text); }
+.viz-btn.active { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.viz-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.viz-sliders { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+.viz-slider { display: flex; flex-direction: column; gap: 0.25rem; flex: 1 1 220px; }
+.viz-slider input[type=range] { width: 100%; accent-color: var(--accent); }
+.viz-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+.viz-table th {
+  font-weight: 500;
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  text-align: left;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.viz-table td { padding: 0.35rem 0.5rem; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.viz-table .num { font-variant-numeric: tabular-nums; }
+.viz-table .inv { color: var(--text); font-weight: 500; background: rgba(61, 53, 48, 0.04); }
+.viz-table .sw { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 0.45rem; vertical-align: 0; }
+.viz-props {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.15rem 1.5rem;
+  font-size: 0.78rem;
+  padding: 0;
+  margin: 0;
+}
+.viz-props li { display: flex; gap: 0.5rem; align-items: baseline; padding: 0.2rem 0; border-bottom: 1px solid var(--border); }
+.viz-props .mark { width: 1em; text-align: center; font-weight: 500; }
+.viz-props .pname { flex: 1; }
+.viz-props .pval { font-variant-numeric: tabular-nums; color: var(--text-faint); }
+.viz-props li.kept { color: var(--text); }
+.viz-props li.lost { color: var(--text-faint); }
+.viz-props li.lost .pname { text-decoration: line-through; text-decoration-color: var(--border); }
+.thought-body figure.viz figcaption {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  border-left: 2px solid var(--border);
+  padding-left: 0.9rem;
+}
+.thought-body blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.2rem;
+  border-left: 2px solid var(--border);
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--text);
+}
+.thought-body blockquote p { font-size: inherit; color: inherit; line-height: inherit; margin-bottom: 0.4rem; }
+@media (max-width: 768px) {
+  .viz-table { font-size: 0.7rem; }
+  .viz-table td, .viz-table th { padding: 0.3rem 0.3rem; }
+  .viz-stage { overflow-x: auto; }
+}
+.viz-table tr.focus td:first-child { color: var(--text); font-weight: 500; }
+.viz-table tr.focus td { background: rgba(61, 53, 48, 0.035); }
+/* very long expanded essays can never reach the fade-in threshold; keep them visible */
+.thought.expanded { opacity: 1 !important; }
+.viz-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
