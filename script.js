@@ -161,11 +161,14 @@ function openEssayFromHash() {
   const target = document.getElementById(id);
   if (!target || !target.classList.contains('thought')) return;
   target.classList.add('expanded');
-  target.style.opacity = '';
-  requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+  target.scrollIntoView({ block: 'start' });
 }
 
 openEssayFromHash();
+// Images above the essay can shift layout while loading, so re-align once they're done
+window.addEventListener('load', () => {
+  if (window.location.hash) openEssayFromHash();
+});
 window.addEventListener('hashchange', openEssayFromHash);
 
 // --- Keyboard ---
