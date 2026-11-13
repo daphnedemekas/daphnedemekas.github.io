@@ -47,6 +47,13 @@ function readContentDir(dir) {
     .sort((a, b) => (Number(a.meta.order) || 99) - (Number(b.meta.order) || 99));
 }
 
+// --- Cache-busting: append a short content hash to asset URLs ---
+
+function assetVersion(file) {
+  const data = fs.readFileSync(path.join(__dirname, file));
+  return require('crypto').createHash('md5').update(data).digest('hex').slice(0, 8);
+}
+
 // --- Poem rendering ---
 
 function poemBodyToHtml(body) {
@@ -311,8 +318,8 @@ const html = `<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daphne Demekas</title>
   <meta name="description" content="AI researcher, writer, and thinker. Focused on aligning AI systems with human cognition, development, and flourishing.">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="viz.css">
+  <link rel="stylesheet" href="style.css?v=${assetVersion('style.css')}">
+  <link rel="stylesheet" href="viz.css?v=${assetVersion('viz.css')}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -609,8 +616,8 @@ ${renderPoems(poems)}
     </div>
   </footer>
 
-  <script src="script.js"></script>
-  <script src="viz.js"></script>
+  <script src="script.js?v=${assetVersion('script.js')}"></script>
+  <script src="viz.js?v=${assetVersion('viz.js')}"></script>
 </body>
 </html>`;
 
