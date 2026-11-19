@@ -430,8 +430,8 @@ const html = `<!DOCTYPE html>
             <span class="cv-date">2026 &ndash; Present</span>
           </div>
           <ul class="cv-list">
-            <li>Researching how generative AI assistance shapes human learning: when it scaffolds a person&rsquo;s own reasoning versus when it quietly replaces it</li>
-            <li>Developing interaction architectures and measurement tools that preserve human cognitive effort, with outcomes judged by unassisted transfer rather than short-term task success</li>
+            <li>Researching how generative AI assistance shapes human learning: when it scaffolds a person&rsquo;s own reasoning versus when it replaces it</li>
+            <li>Leading a study comparing regular ChatGPT, ChatGPT Study Mode and no AI on reading, fractions and logic: how each affects people&rsquo;s ability to solve new problems on their own, how well they predict their own performance, and which mode they prefer when given the choice</li>
           </ul>
         </div>
         <div class="cv-entry">
