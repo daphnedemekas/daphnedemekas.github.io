@@ -388,7 +388,7 @@ const html = `<!DOCTYPE html>
         <div class="about-details">
           <p class="about-meta">San Francisco, CA &middot; <a href="mailto:daphnedemekas@gmail.com">daphnedemekas@gmail.com</a> &middot; <a href="https://x.com/daphwd" target="_blank" rel="noopener">Twitter</a></p>
         </div>
-        <p class="about-summary">An AI researcher focused on aligning AI systems with human cognition, development, and flourishing. Recently worked with Emmett Shear at Softmax (an AI alignment company). Now I am cofounder of Mind at Large, an AI company building technology for rewiring and reprocessing pain.</p>
+        <p class="about-summary">An AI researcher focused on aligning AI systems with human cognition, development, and flourishing. Recently worked with Emmett Shear at Softmax (an AI alignment company). Now I am cofounder of Mind at Large, an AI lab developing systems optimized for diverse measures of human wellbeing through connecting the brain, body and inner world.</p>
       </div>
 
       <div class="cv-section">
